@@ -282,3 +282,12 @@
 .post-image {
   animation: imageGlitch 10s infinite;
 }
+
+
+/* Your custom styles here */
+.terminal-window main p a {
+  color: #00b300;  /* Changed to green */
+  text-decoration: none;
+  font-weight: bold;  /* Makes links bold */
+  font-size: 1.2rem;  /* Makes links 20% bigger than normal text */
+}

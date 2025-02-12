@@ -4,7 +4,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post 2 - Pavel Konoplenko Home</title>
+    <title>Following obsessions - Pavel Konoplenko Home</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
@@ -21,14 +21,14 @@
         
         <main class="terminal-window">
             
-  <h1>Following obsessive curiosity</h1>
+  <h1>Following obsessions</h1>
 
   
   
   <time datetime="2023-02-15T10:00:00-07:00">February 15, 2023</time>
 
-  <p>But only for a little bit.</p>
-<p>Different levels of obsessions.</p>
+  <p>Knowing when is enough is the secret. There&rsquo;s different levels of obsessions, all concurrently pulling and influences us.</p>
+<p>We find ourselves in the middle.</p>
 
   
   <div>
@@ -49,56 +49,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            
-            const cursor = document.createElement('div');
-            cursor.className = 'cursor-glitch';
-            const cursorShadow = document.createElement('div');
-            cursorShadow.className = 'cursor-shadow';
-            
-            document.body.appendChild(cursor);
-            document.body.appendChild(cursorShadow);
-            document.body.classList.add('glitch-cursor-active');
-
-            let lastX = 0;
-            let lastY = 0;
-            let glitching = false;
-
-            
-            document.addEventListener('mousemove', (e) => {
-                if (!glitching) {
-                    cursor.style.left = e.clientX + 'px';
-                    cursor.style.top = e.clientY + 'px';
-                    
-                    
-                    cursorShadow.style.left = lastX + 'px';
-                    cursorShadow.style.top = lastY + 'px';
-                    
-                    lastX = e.clientX;
-                    lastY = e.clientY;
-                }
-            });
-
-            
-            setInterval(() => {
-                if (Math.random() < 0.1) { 
-                    glitching = true;
-                    cursor.style.animation = 'cursorGlitch 0.3s steps(2) forwards';
-                    
-                    setTimeout(() => {
-                        cursor.style.animation = 'none';
-                        glitching = false;
-                    }, 300);
-                }
-            }, 2000);
-
-            
-            document.addEventListener('click', () => {
-                cursor.style.animation = 'cursorGlitch 0.3s steps(2) forwards';
-                setTimeout(() => {
-                    cursor.style.animation = 'none';
-                }, 300);
-            });
-
             
             const emojis = ['(╯°□°)╯︵ ┻━┻', '☜(ﾟヮﾟ☜)', '(⌐■_■)', '【=◈︿◈=】'];
             
@@ -166,33 +116,6 @@
             }
 
             window.addEventListener('scroll', showRandomMessage);
-
-            
-            const createMatrixRain = () => {
-                const container = document.createElement('div');
-                container.className = 'matrix-rain';
-                document.body.appendChild(container);
-
-                const chars = 'ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍ01234567890'.split('');
-                
-                const createRainLine = () => {
-                    const line = document.createElement('div');
-                    line.className = 'rain-line';
-                    line.style.left = `${Math.random() * 100}%`;
-                    line.style.animationDuration = `${Math.random() * 2 + 1}s`;
-                    line.textContent = chars[Math.floor(Math.random() * chars.length)];
-                    container.appendChild(line);
-                    
-                    line.addEventListener('animationend', () => line.remove());
-                };
-
-                setInterval(createRainLine, 100);
-            };
-
-            
-            if (window.innerWidth >= 769) {
-                createMatrixRain();
-            }
         });
     </script>
 </body>
