@@ -11,9 +11,11 @@
     <div class="container">
         <header class="terminal-window">
             <nav>
-                <a href="/">Home</a>
-                <a href="/posts">Posts</a>
-                <a href="/about">About</a>
+                
+                    <a href="/">Home</a>
+                
+                    <a href="/posts/">Posts</a>
+                
             </nav>
         </header>
         
@@ -46,5 +48,77 @@
             <p>&copy; 2025 Digital Philosophy</p>
         </footer>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const emojis = ['(╯°□°)╯︵ ┻━┻', '☜(ﾟヮﾟ☜)', '(⌐■_■)', '【=◈︿◈=】'];
+            
+            document.querySelectorAll('.emoji-trigger').forEach(trigger => {
+                const emoji = document.createElement('span');
+                emoji.className = 'secret-emoji';
+                emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                trigger.parentNode.insertBefore(emoji, trigger.nextSibling);
+            });
+
+            
+            let lastScrollPosition = window.pageYOffset;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                document.querySelectorAll('.post-card').forEach(card => {
+                    if (currentScroll > lastScrollPosition) {
+                        card.style.transform = 'translateX(2px)';
+                    } else {
+                        card.style.transform = 'translateX(-2px)';
+                    }
+                    setTimeout(() => {
+                        card.style.transform = 'translateX(0)';
+                    }, 50);
+                });
+                lastScrollPosition = currentScroll;
+            });
+
+            
+            const progressBar = document.createElement('div');
+            progressBar.className = 'scroll-progress';
+            document.body.appendChild(progressBar);
+
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.transform = `scaleX(${scrolled / 100})`;
+            });
+
+            
+            const messages = [
+                'ACCESSING CYBERNET...',
+                'DOWNLOADING REALITY...',
+                'BUFFERING CONSCIOUSNESS...',
+                'UPLOADING THOUGHTS...',
+                'SYNTHESIZING VIBES...'
+            ];
+
+            function showRandomMessage() {
+                if (Math.random() < 0.1) { 
+                    const message = document.createElement('div');
+                    message.className = 'loading-message';
+                    message.textContent = messages[Math.floor(Math.random() * messages.length)];
+                    document.body.appendChild(message);
+                    
+                    setTimeout(() => {
+                        message.classList.add('show');
+                    }, 100);
+
+                    setTimeout(() => {
+                        message.classList.remove('show');
+                        setTimeout(() => message.remove(), 300);
+                    }, 2000);
+                }
+            }
+
+            window.addEventListener('scroll', showRandomMessage);
+        });
+    </script>
 </body>
 </html>
