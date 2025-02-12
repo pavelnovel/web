@@ -1,0 +1,4 @@
+baseURL = 'https://pavelnovel.com'
+languageCode = 'en-us'
+title = 'Pavel Novel Web'
+theme = "vaporwave-terminal"
