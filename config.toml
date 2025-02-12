@@ -1,4 +1,15 @@
 baseURL = 'https://pavelnovel.com'
 languageCode = 'en-us'
-title = 'Pavel Novel Web'
+title = 'Pavel Konoplenko Home'
 theme = "vaporwave-terminal"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Posts"
+    pageRef = "/posts/"
+    weight = 20
