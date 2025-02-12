@@ -1,0 +1,29 @@
+{{/* layouts/_default/baseof.html */}}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+</head>
+<body>
+    <div class="container">
+        <header class="terminal-window">
+            <nav>
+                <a href="/">Home</a>
+                <a href="/posts">Posts</a>
+                <a href="/about">About</a>
+            </nav>
+        </header>
+        
+        <main class="terminal-window">
+            {{ block "main" . }}{{ end }}
+        </main>
+        
+        <footer class="terminal-window">
+            <p>&copy; {{ now.Year }} Digital Philosophy</p>
+        </footer>
+    </div>
+</body>
+</html>
