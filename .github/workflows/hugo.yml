@@ -25,7 +25,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.DEPLOY_PAT }}
           publish_dir: ./public
           publish_branch: gh-pages  # Ensure it's pushing to the correct branch
           allow_empty_commit: true  # Prevents errors if no changes are detected
