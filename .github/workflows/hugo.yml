@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false  # Disable default GitHub token credentials
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -25,3 +27,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          publish_branch: gh-pages  # Ensure it's pushing to the correct branch
+          allow_empty_commit: true  # Prevents errors if no changes are detected
