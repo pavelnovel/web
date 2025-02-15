@@ -4,7 +4,11 @@ date: 2025-02-11
 draft: false
 ---
 
-Hello and welcome to my website! I'm Pavel Konoplenko. I built this website myself with some creativity and AI. You'll find out what you need about me here.
+Hello and welcome! I'm *Pavel Konoplenko*. Here you'll some more about me and to my thoughts.  
+
+I write about marketing, business, and philosophy.
+
+In the 15 years, I've developed my own own perspectives that others have found heplful. These thoughts are not meant to be correct
 
 ## My Story
 I'm an writer, marketer, philosopher, founder, dad. I'm curious by nature, and maybe also curious by design. 
