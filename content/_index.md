@@ -8,10 +8,7 @@ Hello and welcome! I'm *Pavel Konoplenko*. Here you'll some more about me and to
 
 I write about marketing, business, and philosophy.
 
-In the 15 years, I've developed my own own perspectives that others have found heplful. These thoughts are not meant to be correct
-
-## My Story
-I'm an writer, marketer, philosopher, founder, dad. I'm curious by nature, and maybe also curious by design. 
+In the 15 years of doing marketing with startups, I've developed my own own perspectives that others have found heplful. These thoughts are not meant to be correct
 
 ## What You’ll Find Here
 - Insights, good questions, and different perspectives.
