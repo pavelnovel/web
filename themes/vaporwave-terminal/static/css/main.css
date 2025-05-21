@@ -127,7 +127,7 @@ a:hover::after {
     padding: 1rem;
   }
 }
-/* Add to your main.css */
+/* Mobile navigation styles */
 
 @media (max-width: 768px) {
 /* Fun mobile nav */
@@ -206,7 +206,7 @@ a:hover::after {
 }
 
 
-/* Add to your main.css */
+/* Header glitch animation */
 
 /* Glitch effect on header tap */
 @keyframes glitch {
